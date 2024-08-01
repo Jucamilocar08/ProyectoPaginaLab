@@ -38,6 +38,7 @@ def add_contact():
         return redirect(url_for('Index'))
     
 
+
 @app.route('/edit/<id>')
 def get_contact(id):
     cur = mysql.connection.cursor()
