@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_mysqldb import MySQL
 
-
 app = Flask(__name__)
 
 # Mysql Connectin
@@ -13,8 +12,6 @@ mysql = MySQL(app)
 
 # settings
 app.secret_key = 'mysecretkey'
-
-
 
 @app.route('/')
 def Index():
@@ -37,8 +34,6 @@ def add_contact():
 
         return redirect(url_for('Index'))
     
-
-
 @app.route('/edit/<id>')
 def get_contact(id):
     cur = mysql.connection.cursor()
