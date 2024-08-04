@@ -64,7 +64,7 @@ def update_contact(id):
 @app.route('/delete/<string:id>')
 def delete_contact(id):
     cur = mysql.connection.cursor()
-    cur.execute('DELETE FROM contacs WHERE id = %s', (id))
+    cur.execute('DELETE FROM contacs WHERE id = %s', (id,))
     mysql.connection.commit()
     flash('Contacto removido satisfactoriamente')
     return redirect(url_for('Index'))
