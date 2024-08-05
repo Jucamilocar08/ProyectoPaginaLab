@@ -21,29 +21,33 @@
         Guardar
     </button>
 </form>
-<table>
-    <thead>
-        <tr>
-            <td>Nombre</td>
-            <td>Telefono</td>
-            <td>Email</td>
-            <td>Operations</td>
-        </tr>
-    </thead>
-    <tbody>
-        {% for contact in contacts %}
-        <tr>
-            <td>{{ contact.1 }}</td>
-            <td>{{ contact.2 }}</td>
-            <td>{{ contact.3 }}</td>
-            <td>
-                <a href="/edit/{{ contact.0}}">Editar</a>
-                <a href="/delete/{{ contact.0}}">Elimiar</a>
-            </td>
-        </tr>
-        {% endfor%}
-    </tbody>
-</table>
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <td>Nombre</td>
+                <td>Telefono</td>
+                <td>Email</td>
+                <td>Operations</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for contact in contacts %}
+            <tr>
+                <td>{{ contact.1 }}</td>
+                <td>{{ contact.2 }}</td>
+                <td>{{ contact.3 }}</td>
+                <td>
+                    <a href="/edit/{{ contact.0}}">Editar</a>
+                    <a href="/delete/{{ contact.0}}">Elimiar</a>
+                </td>
+            </tr>
+            {% endfor%}
+        </tbody>
+    </table>
+</div>
+
+
 
 {% endblock %}
 
