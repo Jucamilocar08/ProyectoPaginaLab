@@ -1,34 +1,48 @@
-html {
-    height: 100%;
-    margin-top: 5%;  
-    margin-left: 10%; 
-    margin-right: 10%;
-    
-    
-  
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+header{
+    background-color: #333;
+    text-align: center;
+}
+.navbar {
+    background-color: #333;
+}
+main {
+    flex: 1;
+    display: flex;
+}
+.left, .right {
+    width: 20%;
+    background-color: #e0e0e0;
+    padding: 10px;
+}
+.center {
+    flex: 1;
+    background-color: #f0f0f0;
+    padding: 10px;
 }
 
-body{
-    border: 2px solid black;
-    position: relative;
-
-    background-image: url("https://media.istockphoto.com/id/1318666502/es/foto/medell%C3%ADn-centro-atardecer-colombia.jpg?s=612x612&w=0&k=20&c=wra_1fX39AGHg0SREx6bNIlmTOsWsMuAfYxW2fi6P4c=");
-    background-size: 150%; /* Ajusta la imagen para cubrir todo el fondo */
-    background-position: none; /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-
-
+.boton{
+    margin: 5%;
 }
 
-/* .h1{
-    position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 50%; 
-            background-color: lightgray;
-} 
- */
-.content{
 
+
+
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
 }

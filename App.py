@@ -26,9 +26,10 @@ def add_contact():
         nombre = request.form['nombre']
         telefono = request.form['telefono']
         email = request.form['email']
+        poliza = request.form['poliza']
         cur = mysql.connection.cursor()
-        cur.execute('INSERT INTO contacs(nombre, telefono, email) VALUES (%s, %s, %s)',
-        (nombre, telefono, email))
+        cur.execute('INSERT INTO contacs(nombre, telefono, email, poliza) VALUES (%s, %s, %s, %s)',
+        (nombre, telefono, email, poliza))
         mysql.connection.commit()
         flash("Dato agregado correctamente")
 
